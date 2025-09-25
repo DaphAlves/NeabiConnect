@@ -10,7 +10,7 @@ import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 @Configuration
-public class BancoConfig {  
+public class bancoConfig {  
 
     @Bean
     public DataSource dataSource() {
@@ -29,7 +29,6 @@ public class BancoConfig {
         adapter.setShowSql(true); // corrigido (agora chama no objeto adapter)
         adapter.setGenerateDdl(true);
         adapter.setDatabasePlatform("org.hibernate.dialect.MariaDBDialect");
-        adapter.setPrepareConnection(true);
         return adapter;
     }
 }
